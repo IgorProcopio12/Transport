@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.15.0.final using JasperReports Library version 6.15.0-dd49bfb94918336b8321d5507193f0169ead4e95  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReportT" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="54bbf4de-30f0-43ae-9840-1d717ff85f16">
+	<property name="com.jaspersoft.studio.data.sql.tables">
+		<![CDATA[dHJhbnNwb3J0LnRhbnF1ZSBBUyAsODMsMTAzLDlmNTJjOTcxLTUyYmYtNDIwYi05YmY3LWE4MWQ4
+YmUyZjVhYTs=]]>
+	</property>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Transport"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT transport.tanque.`idTanque`,
+	transport.tanque.descricao,
+	transport.tanque.capacidade,
+	transport.tanque.`Garagem_idGaragemT`
+FROM transport.tanque]]>
+	</queryString>
+	<field name="idTanque" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="idTanque"/>
+		<property name="com.jaspersoft.studio.field.label" value="idTanque"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tanque"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="descricao" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="descricao"/>
+		<property name="com.jaspersoft.studio.field.label" value="descricao"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tanque"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="capacidade" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="capacidade"/>
+		<property name="com.jaspersoft.studio.field.label" value="capacidade"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tanque"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Garagem_idGaragemT" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="Garagem_idGaragemT"/>
+		<property name="com.jaspersoft.studio.field.label" value="Garagem_idGaragemT"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tanque"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<group name="Group1">
+		<groupExpression><![CDATA[$F{Garagem_idGaragemT}]]></groupExpression>
+		<groupHeader>
+			<band height="33">
+				<staticText>
+					<reportElement mode="Opaque" x="0" y="0" width="100" height="32" forecolor="#666666" backcolor="#E6E6E6" uuid="939a7690-5fec-4838-b936-d5fa9e068edb"/>
+					<textElement>
+						<font size="12"/>
+					</textElement>
+					<text><![CDATA[Garagem]]></text>
+				</staticText>
+				<textField>
+					<reportElement mode="Opaque" x="100" y="0" width="455" height="32" forecolor="#006699" backcolor="#E6E6E6" uuid="beb8994f-0b38-442a-8a6e-f919658de6bc"/>
+					<textElement>
+						<font size="24" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{Garagem_idGaragemT}]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement x="-20" y="32" width="595" height="1" forecolor="#666666" uuid="2ce0e924-68af-41d4-afc9-4032b1a07903"/>
+				</line>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band/>
+		</groupFooter>
+	</group>
+	<background>
+		<band/>
+	</background>
+	<title>
+		<band height="72">
+			<frame>
+				<reportElement mode="Opaque" x="-20" y="-20" width="595" height="92" backcolor="#006699" uuid="bd0d2a2a-5aba-4829-a61e-641dfd88d349"/>
+				<staticText>
+					<reportElement x="20" y="20" width="234" height="43" forecolor="#FFFFFF" uuid="26162565-27d7-4d78-987a-24f04c11ccb4"/>
+					<textElement>
+						<font size="34" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Tanques]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="395" y="43" width="180" height="20" forecolor="#FFFFFF" uuid="e39f7a5b-2bc5-4ade-bb18-362211555c4e"/>
+					<textElement textAlignment="Right">
+						<font size="14" isBold="false"/>
+					</textElement>
+					<text><![CDATA[Transport]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="13"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="21">
+			<line>
+				<reportElement x="-20" y="20" width="595" height="1" forecolor="#666666" uuid="c8951d2d-176b-49a0-971e-c607aeb79e8c"/>
+			</line>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="185" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="44bceb4f-b3e8-47b9-9f1f-7be744fa6900">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="80fae05f-85e8-42f9-a22f-142e43a641d1"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Código]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="185" y="0" width="185" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="2b688d6d-3ce9-49fa-84db-d2aa05426ce9">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="538f23c0-e5f1-4837-a6c7-cc95afa1f3f3"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Descricao]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="370" y="0" width="185" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="19b9ac4a-fd20-44c9-977f-2e0f5b485351">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="bc3bc29d-2043-482d-acfc-cef429436a94"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Capacidade]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="19" width="555" height="1" uuid="28e4332c-a135-4720-95e1-886df1cc518f"/>
+			</line>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="0" y="0" width="185" height="20" uuid="21051d9f-eb8c-4072-b41e-25c94ee2b6a8">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="80fae05f-85e8-42f9-a22f-142e43a641d1"/>
+				</reportElement>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{idTanque}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="185" y="0" width="185" height="20" uuid="80aa6c87-d4ca-4630-87df-e384983909c9">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="538f23c0-e5f1-4837-a6c7-cc95afa1f3f3"/>
+				</reportElement>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{descricao}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="370" y="0" width="185" height="20" uuid="f2939922-f919-4048-8c62-bfc47604c831">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="bc3bc29d-2043-482d-acfc-cef429436a94"/>
+				</reportElement>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{capacidade}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band/>
+	</columnFooter>
+	<pageFooter>
+		<band height="17">
+			<textField>
+				<reportElement mode="Opaque" x="0" y="4" width="515" height="13" backcolor="#E6E6E6" uuid="c16b0797-13e8-4453-b103-2f3d2975a776"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement mode="Opaque" x="515" y="4" width="40" height="13" backcolor="#E6E6E6" uuid="35c38f37-16c0-4491-b6f7-5b0064899081"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="0" y="4" width="100" height="13" uuid="ac78371f-bfa7-40ac-be20-83796c4237bc"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band/>
+	</summary>
+</jasperReport>
